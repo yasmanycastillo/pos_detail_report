@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pos_detail_report/static/src/js/models.js"></script>
+        </xpath>
+    </template>
+
+    <record id='pos_detail_report_inherit_pos_order_view' model='ir.ui.view'>
+        <!-- <field name="name">pos.deta</field> -->
+        <field name='model'>pos.order</field>
+        <field name='inherit_id' ref='point_of_sale.view_pos_pos_form'/>
+        <field name="arch" type="xml">
+            <field name='pos_reference' position='after'>
+                <field name='rate'/>
+            </field>
+        </field>
+    </record>
+</odoo>

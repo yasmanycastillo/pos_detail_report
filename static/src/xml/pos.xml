@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="PosTicket">
+        <t t-jquery=".emph" t-operation="after">
+            <tr class="emph">
+                <td>Total USD:</td>
+                <td class="pos-right-align">
+                    $<t t-esc="order.usd_amount"/>
+                    $<t t-esc="widget.pos.usd_amount"/>
+                    <!-- $<t t-esc="order.get_usd_total()"/> -->
+                </td>
+            </tr>
+        </t>
+    </t>
+
+</templates>

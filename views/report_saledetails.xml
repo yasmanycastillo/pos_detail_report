@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_saledetails_extended">
+            <t t-call="report.html_container">
+                <t t-call="report.internal_layout">
+                    <xpath expr="//table[@class='table']/thead/tr/[last()]" position="after">
+                        <th>Total Propina</th>
+                    </xpath>
+                    <xpath expr="//table[@class='table']/tbody/tr/[last()]" position="after">
+                        <td><t t-esc="payment['tip']" /></td>
+                    </xpath>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
